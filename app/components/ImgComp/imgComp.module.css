@@ -1,0 +1,29 @@
+.main {
+    margin: 60px 0 10px 0;
+    padding: 0 10px;
+    width: 80%;
+    height: 550px;
+}
+
+.main img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 #eee;
+}
+
+.loading {
+    padding-top: 260px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width:750px) {
+    .main {
+        margin: 20px 0 10px 0;
+        width: 100% !important;
+    }
+}

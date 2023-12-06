@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.box {
+  width: 90%;
+  padding: 25px 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #eee;
+}
+
+.flex{
+  display:  flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:1640px) {
+  .main {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .box{
+    width: 100%;
+    padding: 0;
+  }
+  .flex{
+    display:  flex;
+    flex-wrap: wrap;
+  }
+}

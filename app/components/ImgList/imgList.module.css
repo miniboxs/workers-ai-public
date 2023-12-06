@@ -1,0 +1,38 @@
+.main {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgBox {
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.promp {
+    z-index: 0;
+    color: #e319b4;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 150px;
+    width: 100%;
+    background: rgba(255, 255, 255,.6);
+    padding: 20px 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    transition: all .2s linear;
+}
