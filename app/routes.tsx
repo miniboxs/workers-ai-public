@@ -6,7 +6,7 @@ export default [
     },
     {
         path: "/about",
-        name: "About",
-        link: 'https://aisb.top'
+        name: "Github",
+        link: 'https://github.com/miniboxs/workers-ai-public'
     }
 ]
