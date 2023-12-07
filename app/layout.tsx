@@ -2,7 +2,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import StyledComponentsRegistry from "@/lib/AntRegistry"
-import Script from 'next/script'
 import dynamic from 'next/dynamic'
 
 const Header = dynamic(() => import("@/app/components/Header/header"))
@@ -39,7 +38,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Script src="https://cdn.splitbee.io/sb.js" strategy="afterInteractive"></Script>
       <body className={roboto.className}>
         <StyledComponentsRegistry>
           <Header />
