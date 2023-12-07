@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
         const res = await fetch(`${api}${model}`, {
             method: "POST",
             headers: {
-                "Authorization": token as string,
+                "Authorization": `Bearer ${token as string}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
@@ -38,7 +38,6 @@ export async function POST(request: NextRequest) {
         }
 
         const blob = await res.blob()
-        console.log(blob);
 
         return new Response(blob, {
             status: 200,
