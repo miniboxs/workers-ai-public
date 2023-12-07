@@ -57,7 +57,7 @@ export default (props: props) => {
             setLoading(false)
             setImgList([])
             // This will activate the closest `error.js` Error Boundary
-            throw new Error('Failed to fetch data')
+            return message.error(res.text())
         }
 
         const blob = await res.blob()

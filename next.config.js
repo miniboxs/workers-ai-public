@@ -1,12 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {
-    env: {
-        cf: {
-            token: 'your cf token',
-            api: 'your api url'
-        },
-    }
-}
+const nextConfig = {}
 
 module.exports = nextConfig

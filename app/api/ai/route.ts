@@ -1,12 +1,8 @@
 import { NextResponse, NextRequest } from 'next/server'
 import { headers } from 'next/headers'
 
-type cfType = {
-    token?: string,
-    api?: string
-}
-
-const { token, api } = process.env.cf as cfType;
+const token = process.env.CF_WORKERS_AI_TOEKN
+const api = process.env.CF_WORKERS_AI_API
 
 export async function POST(request: NextRequest) {
     try {
@@ -18,6 +14,13 @@ export async function POST(request: NextRequest) {
                 status: 401
             })
         }
+
+        if (!token?.length || !api?.length) {
+            return new Response('token或者api缺失', {
+                status: 400
+            })
+        }
+
         const res = await fetch(`${api}${model}`, {
             method: "POST",
             headers: {
