@@ -2,7 +2,6 @@
 
 const nextConfig = {
     output: 'standalone',
-    runtime: 'edge'
 }
 
 module.exports = nextConfig

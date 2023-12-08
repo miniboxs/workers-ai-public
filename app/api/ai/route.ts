@@ -20,7 +20,8 @@ export async function POST(request: NextRequest) {
                 status: 400
             })
         }
-
+        console.log(`${api}${model}`,'api');
+        
         const res = await fetch(`${api}${model}`, {
             method: "POST",
             headers: {
@@ -50,6 +51,8 @@ export async function POST(request: NextRequest) {
         })
 
     } catch (error: any) {
+        console.log(error,'err');
+        
         return new Response('system error', {
             status: 500
         })
