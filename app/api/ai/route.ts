@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
             status: 200,
             headers: {
                 // "content-type": "image/png",
-                'Access-Control-Allow-Origin': 'https://sd.aisb.top',
+                'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Methods': 'POST',
                 'Access-Control-Allow-Headers': 'Content-Type, Authorization',
             },
